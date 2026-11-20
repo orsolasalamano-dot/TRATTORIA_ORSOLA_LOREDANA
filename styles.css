@@ -1,0 +1,252 @@
+/* Orsola & Loredana's Digital Platforms Trattoria
+   All styles for the site, merged from the five Claude Design boards (see DESIGN-SPEC.md). */
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#FFF7EC;color:#2B1D14;font-family:'Nunito',system-ui,sans-serif}
+a{color:#2E6B34}a:hover{color:#1E4A23}
+:focus-visible{outline:3px solid #E0A82E;outline-offset:3px}
+button,input{font-family:inherit}
+[hidden]{display:none !important}
+#app:focus{outline:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---------- Layout shell ---------- */
+.page{min-height:100vh;display:flex;flex-direction:column}
+.ck{height:16px;background:repeating-conic-gradient(#C0392B 0 25%,#FFF7EC 0 50%) 0 0/16px 16px}
+.ck-sm{height:12px;background-size:12px 12px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;width:100%}
+.hand{font-family:'Caveat',cursive;font-weight:700}
+.disp{font-family:'Fredoka',sans-serif;font-weight:700}
+.m0{margin:0}
+.muted{color:#4A3B2C}
+
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:22px 0}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#2B1D14}
+.brand:hover{color:#2B1D14}
+.brand-text{display:flex;flex-direction:column}
+.brand-kicker{color:#C0392B;font-size:20px;line-height:1}
+.brand-name{font-size:26px;line-height:1.1}
+.mainnav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.nav{font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#2B1D14;text-decoration:none;padding:10px 16px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
+.nav:hover{background:#F6E6CC;color:#2B1D14}
+.nav-on{background:#F6E6CC}
+
+.foot{background:#2E6B34;color:#fff;margin-top:auto}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-top:22px;padding-bottom:22px}
+.foot-hand{font-size:26px}
+.foot-note{font-size:14px;font-weight:600}
+
+/* ---------- Buttons ---------- */
+.btn{font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;border:0;border-radius:999px;cursor:pointer;min-height:44px;padding:10px 22px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .1s}
+.btn:active{transform:translateY(3px)}
+.btn-red{background:#C0392B;color:#fff;box-shadow:0 4px 0 #8E2A1F}.btn-red:hover{color:#fff;background:#B03224}
+.btn-green{background:#2E6B34;color:#fff;box-shadow:0 4px 0 #1E4A23}.btn-green:hover{color:#fff;background:#275D2D}
+.btn-ghost{background:#fff;color:#2B1D14;border:2px solid #2B1D14}.btn-ghost:hover{color:#2B1D14;background:#FFF1DC}
+.btn-off{background:#EBDCC2;color:#6B5A45;cursor:not-allowed;box-shadow:none}
+.btn-off:active{transform:none}
+.btn-lg{font-size:18px;padding:14px 26px}
+
+/* ---------- Il Conto (the bill) ---------- */
+.bill{background:#fff;border:2px dashed #E3C9A0;border-radius:14px;box-shadow:0 6px 0 #F0DDBD;padding:18px 20px;color:#2B1D14}
+.bill-head{display:flex;justify-content:space-between;align-items:baseline}
+.bill-title{font-size:32px;color:#C0392B}
+.bill-tag{font-size:12px;letter-spacing:.1em;color:#6B5A45}
+.bill-row{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dotted #D9BF96;font-size:15px}
+.bill-row b{font-family:'Fredoka',sans-serif}
+.bill-row:last-child{border-bottom:0}
+.bill-total{font-size:16px;padding-top:12px}
+.bill-total b{color:#C0392B}
+.bill-mini{padding:10px 16px;box-shadow:none;display:flex;gap:18px;font-size:14px}
+.bill-mini b{font-size:18px}
+
+.bar{height:14px;background:#F6E6CC;border-radius:999px;overflow:hidden}
+.bar-sm{height:10px}
+.bar-fill{height:100%;background:#E0A82E;border-radius:999px;min-width:14px;transition:width .6s}
+
+/* ---------- Hero blocks ---------- */
+.hero{display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between;padding:12px 0 28px}
+.hero-main{flex:1 1 480px;min-width:0;display:flex;gap:22px;align-items:center}
+.hero-copy{display:flex;flex-direction:column;gap:6px;min-width:0}
+.hero-icon{flex:none;width:128px;height:128px;border-radius:50%;background:#FCEFD6;display:flex;align-items:center;justify-content:center;border:3px solid #fff;box-shadow:0 0 0 3px #C0392B}
+.hero-kicker{margin:0;color:#2E6B34;font-size:24px}
+.hero-title{margin:0;font-size:clamp(34px,5vw,52px);line-height:1.02}
+.hero-title span{color:#C0392B}
+.hero-blurb{margin:0;font-size:16px;line-height:1.5;color:#4A3B2C;max-width:540px}
+.hero-bill{flex:0 1 320px;transform:rotate(1deg)}
+@media (max-width:520px){.hero-main{flex-direction:column;align-items:flex-start}}
+
+/* ---------- Home (Il Menù) ---------- */
+.home-hero{gap:40px;padding:28px 0 48px}
+.home-copy{flex:1 1 460px;min-width:0;display:flex;flex-direction:column;gap:18px}
+.greeting{margin:0;color:#2E6B34;font-size:28px;transform:rotate(-2deg);transform-origin:left}
+.home-title{margin:0;font-size:clamp(40px,6vw,66px);line-height:1.02;letter-spacing:-.01em}
+.home-title span{color:#C0392B}
+.home-lead{margin:0;font-size:18px;line-height:1.55;max-width:520px;color:#4A3B2C}
+.home-bill{flex:0 1 360px;transform:rotate(1.5deg);padding:20px 22px}
+.home-bill .bill-title{font-size:34px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;padding-top:6px}
+
+.section-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;padding-bottom:20px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:18px;align-items:stretch}
+.dish{border-radius:18px;padding:18px;display:flex;flex-direction:column;gap:10px;min-height:100%}
+.dish-open{background:#fff;border:3px solid #C0392B;box-shadow:0 6px 0 #C0392B}
+.dish-shut{background:#F8EEDD;border:2px dashed #E0C79C}
+.dish-boss{border-color:#C0392B}
+.dish-top{display:flex;justify-content:space-between;align-items:center;gap:6px}
+.dish h3{margin:0;font-size:26px}
+.dish-shut h3{color:#4A3B2C}
+.dish .btn{margin-top:auto}
+.lvl{font-family:'Fredoka',sans-serif;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.tag{font-family:'Fredoka',sans-serif;font-weight:600;font-size:12px;padding:3px 10px;border-radius:999px;background:#E3F0DF;color:#1E4A23}
+.plate{border-radius:14px;height:110px;display:flex;align-items:center;justify-content:center;background:#FCEFD6}
+.dish-shut .plate{background:#F1E2C8}
+.meta{margin:0;font-size:14px;color:#4A3B2C}
+.games{margin:0;padding:0;list-style:none;font-size:13px;color:#4A3B2C;display:flex;flex-direction:column;gap:3px}
+.soon{margin:0;font-size:22px;color:#6B5A45}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.step{background:#fff;border-radius:16px;border:2px solid #F0DDBD;padding:18px;display:flex;gap:14px;align-items:flex-start}
+.step h3{margin:0 0 4px;font-size:19px}
+.num{flex:none;width:40px;height:40px;border-radius:50%;background:#2E6B34;color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fredoka',sans-serif;font-weight:700;font-size:18px}
+
+/* ---------- Level pages ---------- */
+.tabs{display:flex;flex-wrap:wrap;gap:12px;padding-bottom:18px}
+.tab{flex:1 1 200px;text-align:left;background:#fff;border:2px solid #F0DDBD;border-radius:16px;padding:12px 14px;cursor:pointer;min-height:64px;display:flex;flex-direction:column;gap:2px;color:#2B1D14}
+.tab:hover{border-color:#E0A82E}
+.tab-on{border-color:#C0392B;box-shadow:0 4px 0 #C0392B}
+.tab-kicker{font-size:12px;letter-spacing:.08em;color:#A93226}
+.tab-label{font-size:17px}
+.tab-status{font-size:13px;color:#4A3B2C}
+
+.panel{background:#fff;border-radius:22px;border:2px solid #F0DDBD;overflow:hidden;margin-bottom:28px}
+.panel-body{padding:clamp(18px,3vw,32px)}
+.game{display:flex;flex-direction:column;gap:18px}
+.game-narrow{max-width:760px}
+.game-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end}
+.game-intro{max-width:640px}
+.game-title{margin:0 0 6px;font-size:30px}
+.lead{margin:0;font-size:16px;line-height:1.5;color:#4A3B2C}
+.split{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start}
+.col{flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.col-wide{flex:1 1 340px}
+.col-title{margin:0;font-size:24px;color:#8E2A1F}
+.pool{flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:10px;background:#FFF4D6;border-radius:18px;padding:16px}
+.slots{flex:1 1 340px;min-width:0;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.msg{font-size:15px;font-weight:700}
+.ok{color:#1E4A23}.bad{color:#A93226}
+
+.strand{position:relative;background:#FFF4D6;border:2px solid #E0A82E;border-radius:14px;padding:10px 12px;cursor:grab;text-align:left;min-height:60px;display:flex;flex-direction:column;gap:2px;color:#2B1D14;width:100%;font-size:inherit}
+.strand:hover{background:#FFEDB8}
+.strand-label{font-size:18px}
+.strand-hint{font-size:13px;color:#4A3B2C}
+.slot{border:2px dashed #D9BF96;border-radius:16px;background:#FFFBF4;min-height:70px;padding:10px 12px;display:flex;align-items:center;gap:12px;width:100%;text-align:left;cursor:pointer;color:#2B1D14;font-size:inherit}
+.slot-full{border-style:solid;border-color:#2E6B34;background:#F1F8EE}
+.slot-bad{border-style:solid;border-color:#C0392B;background:#FDECEA}
+.slot-over{border-color:#E0A82E;background:#FFF4D6}
+.slot-num{flex:none;width:38px;height:38px;border-radius:50%;background:#F6E6CC;display:flex;align-items:center;justify-content:center;font-family:'Fredoka',sans-serif;font-weight:700}
+.slot-body{display:flex;flex-direction:column;gap:2px;min-width:0}
+.station{font-size:12px;font-family:'Fredoka',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#6B5A45}
+.recap{background:#F1F8EE;border-radius:16px;padding:16px 18px;border:2px solid #2E6B34}
+.recap h3{margin:0 0 6px;font-size:18px;color:#1E4A23}
+.recap p{margin:0;font-size:15px;line-height:1.55}
+
+/* Sauce Sorter */
+.code{font-family:'JetBrains Mono',ui-monospace,monospace;font-weight:500;font-size:clamp(14px,2.2vw,19px);background:#2B1D14;color:#FFF4D6;border-radius:14px;padding:18px 20px;word-break:break-word;box-shadow:0 8px 0 #E3C9A0}
+.pots{display:flex;flex-wrap:wrap;gap:14px}
+.pot{flex:1 1 150px;border:0;border-radius:20px;padding:14px 12px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:120px;box-shadow:0 5px 0 rgba(0,0,0,.25)}
+.pot:active{transform:translateY(3px)}
+.pot-name{font-size:22px}
+.pot-sub{font-size:14px;font-weight:700}
+.pot-html{background:#F2C14E;color:#2B1D14}
+.pot-css{background:#C0392B;color:#fff}
+.pot-js{background:#2E6B34;color:#fff}
+.center{text-align:center;padding:18px 10px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.note{text-align:left;background:#FFF4D6;border-radius:16px;padding:14px 18px;max-width:620px;font-size:15px;line-height:1.6}
+.drop-a{animation:dropA .5s cubic-bezier(.3,1.5,.5,1)}
+.drop-b{animation:dropB .5s cubic-bezier(.3,1.5,.5,1)}
+@keyframes dropA{0%{transform:translateY(-60px) rotate(-4deg);opacity:0}100%{transform:none;opacity:1}}
+@keyframes dropB{0%{transform:translateY(-60px) rotate(4deg);opacity:0}100%{transform:none;opacity:1}}
+
+/* Quiz */
+.question{margin:0;font-size:22px;line-height:1.3}
+.question:focus{outline:none}
+.opt{width:100%;text-align:left;background:#FFFBF4;border:2px solid #F0DDBD;border-radius:14px;padding:12px 14px;min-height:52px;cursor:pointer;font-size:16px;color:#2B1D14;display:flex;gap:10px;align-items:center}
+.opt:hover{border-color:#E0A82E}
+.opt-good{background:#E3F0DF;border-color:#2E6B34}
+.opt-bad{background:#FDECEA;border-color:#C0392B}
+.letter{flex:none;width:30px;height:30px;border-radius:50%;background:#F6E6CC;display:flex;align-items:center;justify-content:center;font-family:'Fredoka',sans-serif;font-weight:700;font-size:14px}
+.why{background:#FFF4D6;border-radius:14px;padding:12px 16px;font-size:15px;line-height:1.5}
+
+/* La Brigata (matching) */
+.chef{width:100%;text-align:left;border-radius:14px;padding:10px 12px;min-height:56px;cursor:pointer;display:flex;align-items:center;gap:10px;border:2px solid #F0DDBD;background:#FFFBF4;color:#2B1D14;font-size:15px}
+.chef:hover{border-color:#E0A82E}
+.chef-on{border-color:#C0392B;background:#FDECEA;box-shadow:0 3px 0 #C0392B}
+.chef-done{border-color:#2E6B34;background:#E3F0DF;cursor:default}
+.chef-done:hover{border-color:#2E6B34}
+.team{flex:none;font-family:'Fredoka',sans-serif;font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 8px;border-radius:999px}
+.team-plan{background:#E3F0DF;color:#1E4A23}
+.team-prod{background:#FCEFD6;color:#8E2A1F}
+
+.pager{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-bottom:48px}
+
+/* Win popup + pasta confetti */
+.cf-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
+.cf{position:absolute;top:-50px;animation-name:fall;animation-timing-function:linear;animation-fill-mode:forwards}
+@keyframes fall{0%{transform:translateY(0) rotate(0)}100%{transform:translateY(115vh) rotate(720deg)}}
+.win{position:fixed;left:50%;top:50%;z-index:60;width:min(380px,88vw);transform:translate(-50%,-50%);background:#fff;border-radius:24px;border:3px solid #C0392B;box-shadow:0 10px 0 #8E2A1F,0 30px 60px rgba(43,29,20,.3);padding:26px;text-align:center;animation:pop .5s cubic-bezier(.3,1.5,.5,1)}
+@keyframes pop{0%{transform:translate(-50%,-50%) scale(.4);opacity:0}100%{transform:translate(-50%,-50%) scale(1);opacity:1}}
+.win-title{margin:4px 0 0;font-size:46px;line-height:1;color:#C0392B}
+.win-kiss{margin:6px 0 0;font-size:15px;letter-spacing:.08em;color:#6B5A45}
+.win-sub{margin:10px 0 16px;font-size:16px;line-height:1.5}
+.kiss{display:inline-block;animation:kiss 1.1s ease-in-out infinite}
+@keyframes kiss{0%,100%{transform:scale(1)}35%{transform:scale(1.2) rotate(-8deg)}60%{transform:scale(.95)}}
+.heart{position:absolute;right:-14px;top:-4px;animation:floaty 1.5s ease-out infinite}
+@keyframes floaty{0%{transform:translateY(6px);opacity:0}25%{opacity:1}100%{transform:translateY(-22px);opacity:0}}
+
+/* ---------- La Mia Cucina (profile) ---------- */
+.card{background:#fff;border-radius:22px;border:2px solid #F0DDBD;padding:clamp(18px,3vw,28px)}
+.avatar{flex:none;width:120px;height:120px;border-radius:50%;background:#2E6B34;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px #FFF7EC,0 0 0 7px #2E6B34}
+.rack-wrap{position:relative;padding-top:10px}
+.rack-rod{position:absolute;left:0;right:0;top:10px;height:14px;border-radius:999px;background:#A9713E;box-shadow:inset 0 -4px 0 #8A5A30}
+.rack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;position:relative}
+.peg{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+.two-up{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;padding-bottom:24px}
+@media (max-width:380px){.two-up{grid-template-columns:1fr}}
+.badges{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px}
+.badge{border-radius:16px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font-size:13px;line-height:1.3}
+.badge-on{background:#FFF4D6;border:2px solid #E0A82E}
+.badge-off{background:#F8F2E8;border:2px dashed #E0C79C;color:#6B5A45}
+
+/* ---------- Prenota (login) ---------- */
+.seg{flex:1 1 0;min-height:44px;border:0;border-radius:999px;cursor:pointer;font-family:'Fredoka',sans-serif;font-weight:600;font-size:15px;background:transparent;color:#4A3B2C}
+.seg-on{background:#fff;color:#2B1D14;box-shadow:0 2px 0 #E3C9A0}
+.field{display:flex;flex-direction:column;gap:6px}
+.lbl{font-family:'Fredoka',sans-serif;font-weight:600;font-size:15px}
+.inp{width:100%;min-height:50px;border:2px solid #D9BF96;border-radius:12px;padding:12px 14px;font-size:16px;background:#FFFBF4;color:#2B1D14}
+.inp:focus{border-color:#2E6B34;outline:none;box-shadow:0 0 0 3px #CFE3CB}
+.inp::placeholder{color:#7A6A57}
+
+.load-error{background:#FDECEA;border:2px solid #C0392B;border-radius:16px;padding:16px 18px;font-size:15px;line-height:1.5}
+
+/* ---------- Poster pasta in the home hero (after the Pasta Street Food poster) ---------- */
+.page{overflow-x:clip}
+.home-hero{position:relative}
+.home-hero>.home-copy,.home-hero>.home-bill{position:relative;z-index:1}
+.deco{position:absolute;inset:0;pointer-events:none;z-index:0}
+.pz{position:absolute;filter:drop-shadow(0 12px 14px rgba(120,70,20,.22))}
+.pz-sticks{width:64px;height:420px;right:-40px;top:-30px;transform:rotate(16deg)}
+.pz-rigatoni{width:240px;right:-150px;top:10px;transform:rotate(-24deg)}
+.pz-elbow{width:140px;left:-140px;top:70px;transform:rotate(-12deg)}
+.pz-fusilli{width:46px;left:58%;top:-26px;transform:rotate(34deg)}
+.pz-penne{width:120px;left:-112px;bottom:40px;transform:rotate(18deg)}
+.pz-wheel{width:92px}
+.pz-wheel1{right:250px;bottom:-14px;animation:bob 5s ease-in-out infinite}
+.pz-wheel2{right:178px;bottom:-40px;width:74px;transform:rotate(20deg);animation:bob 5s ease-in-out -2.5s infinite}
+@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@media (max-width:1100px){.pz-elbow,.pz-penne{display:none}}
+@media (max-width:900px){.pz-sticks,.pz-wheel{display:none}.pz-fusilli{left:auto;right:30%;top:-30px}.pz-rigatoni{width:170px;right:-90px;top:-20px}}
+@media (max-width:520px){.pz-fusilli{display:none}.pz-rigatoni{width:130px;right:-70px;top:-34px;opacity:.9}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important}}

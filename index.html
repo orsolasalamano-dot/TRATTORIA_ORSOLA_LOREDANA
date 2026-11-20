@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Il Menù · Digital Platforms Trattoria</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='23' fill='%232E6B34'/%3E%3Cpath d='M11 20c4-6 9 6 13 0s9 6 13 0M11 29c4-6 9 6 13 0s9 6 13 0' fill='none' stroke='%23F2C14E' stroke-width='3.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+  <div class="ck"></div>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="#menu">
+        <svg width="52" height="52" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#2E6B34"/><path d="M11 20c4-6 9 6 13 0s9 6 13 0M11 29c4-6 9 6 13 0s9 6 13 0" fill="none" stroke="#F2C14E" stroke-width="3.5" stroke-linecap="round"/></svg>
+        <span class="brand-text"><span class="hand brand-kicker">Orsola &amp; Loredana's Digital Platforms</span><span class="disp brand-name">Trattoria</span></span>
+      </a>
+      <nav aria-label="Main" class="mainnav">
+        <a class="nav" href="#menu" data-nav="menu">Il Menù</a>
+        <a class="nav" href="#cucina" data-nav="cucina">La Mia Cucina</a>
+        <a class="btn btn-red" href="#prenota" data-book>Prenota un Tavolo</a>
+      </nav>
+    </header>
+    <main id="app" tabindex="-1"></main>
+  </div>
+  <footer class="foot">
+    <div class="wrap">
+      <span class="hand foot-hand">Buon appetito e buono studio!</span>
+      <span class="foot-note" id="foot-note">Orsola &amp; Loredana's Digital Platforms Trattoria · Fall 2026</span>
+    </div>
+  </footer>
+  <div class="ck"></div>
+</div>
+<div id="win" aria-live="polite"></div>
+<noscript><p style="padding:20px;text-align:center">The Trattoria needs JavaScript turned on to cook.</p></noscript>
+
+<!-- ============ VIEW TEMPLATES (script.js clones one into #app) ============ -->
+
+<!-- Il Menù (home) -->
+<template id="tpl-menu">
+ <div>
+  <section class="hero home-hero">
+    <div class="deco" aria-hidden="true">
+      <svg width="0" height="0" style="position:absolute"><defs>
+        <linearGradient id="gTube" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E3A33A"/><stop offset=".3" stop-color="#FCDD82"/><stop offset=".62" stop-color="#F4C150"/><stop offset="1" stop-color="#CF8A28"/></linearGradient>
+        <linearGradient id="gStick" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D9922B"/><stop offset=".4" stop-color="#FCDD82"/><stop offset="1" stop-color="#D08B2A"/></linearGradient>
+        <radialGradient id="gWheel" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#FDE49A"/><stop offset=".6" stop-color="#F4C150"/><stop offset="1" stop-color="#DA9A33"/></radialGradient>
+      </defs></svg>
+      <svg class="pz pz-sticks" viewBox="0 0 80 520"><rect x="8" y="0" width="14" height="520" rx="7" fill="url(#gStick)"/><rect x="52" y="40" width="14" height="480" rx="7" fill="url(#gStick)"/></svg>
+      <svg class="pz pz-rigatoni" viewBox="0 0 240 100"><ellipse cx="220" cy="50" rx="14" ry="40" fill="#D9922B"/><rect x="20" y="10" width="200" height="80" fill="url(#gTube)"/><path d="M34 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M45 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M56 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M67 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M78 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M89 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M100 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M111 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M122 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M133 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M144 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M155 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M166 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M177 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M188 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M199 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><path d="M210 12v76" stroke="#C98A2B" stroke-width="2" opacity=".35"/><ellipse cx="20" cy="50" rx="14" ry="40" fill="#F6C453" stroke="#D9922B" stroke-width="2"/><ellipse cx="21" cy="50" rx="8" ry="31" fill="#B8741F"/></svg>
+      <svg class="pz pz-elbow" viewBox="0 0 160 160"><path d="M32 132C32 62 62 32 132 32" fill="none" stroke="#C98A2B" stroke-width="38"/><path d="M32 132C32 62 62 32 132 32" fill="none" stroke="#F4C150" stroke-width="32"/><path d="M26 126C26 60 58 26 126 26" fill="none" stroke="#FDE7A4" stroke-width="7" opacity=".75" stroke-linecap="round"/><path d="M32 132C32 62 62 32 132 32" fill="none" stroke="#C98A2B" stroke-width="32" stroke-dasharray="2 8" opacity=".35"/><ellipse cx="32" cy="134" rx="17" ry="7" fill="#B8741F" stroke="#F4C150" stroke-width="3"/><ellipse cx="134" cy="32" rx="7" ry="17" fill="#B8741F" stroke="#F4C150" stroke-width="3"/></svg>
+      <svg class="pz pz-fusilli" viewBox="0 0 60 160"><rect x="8" y="8" width="44" height="24" rx="12" transform="rotate(-20 30 20)" fill="url(#gWheel)" stroke="#D9922B" stroke-width="2"/><path d="M14 16q16-8 32-2" stroke="#FDE7A4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/><rect x="8" y="27" width="44" height="24" rx="12" transform="rotate(-20 30 39)" fill="url(#gWheel)" stroke="#D9922B" stroke-width="2"/><path d="M14 35q16-8 32-2" stroke="#FDE7A4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/><rect x="8" y="46" width="44" height="24" rx="12" transform="rotate(-20 30 58)" fill="url(#gWheel)" stroke="#D9922B" stroke-width="2"/><path d="M14 54q16-8 32-2" stroke="#FDE7A4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/><rect x="8" y="65" width="44" height="24" rx="12" transform="rotate(-20 30 77)" fill="url(#gWheel)" stroke="#D9922B" stroke-width="2"/><path d="M14 73q16-8 32-2" stroke="#FDE7A4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/><rect x="8" y="84" width="44" height="24" rx="12" transform="rotate(-20 30 96)" fill="url(#gWheel)" stroke="#D9922B" stroke-width="2"/><path d="M14 92q16-8 32-2" stroke="#FDE7A4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/><rect x="8" y="103" width="44" height="24" rx="12" transform="rotate(-20 30 115)" fill="url(#gWheel)" stroke="#D9922B" stroke-width="2"/><path d="M14 111q16-8 32-2" stroke="#FDE7A4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/><rect x="8" y="122" width="44" height="24" rx="12" transform="rotate(-20 30 134)" fill="url(#gWheel)" stroke="#D9922B" stroke-width="2"/><path d="M14 130q16-8 32-2" stroke="#FDE7A4" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/></svg>
+      <svg class="pz pz-penne" viewBox="0 0 160 70"><polygon points="18,62 48,8 152,8 122,62" fill="url(#gTube)" stroke="#D9922B" stroke-width="2" stroke-linejoin="round"/><path d="M66 12l-26 46M82 12l-26 46M98 12l-26 46M114 12l-26 46M130 12l-26 46" stroke="#C98A2B" stroke-width="2" opacity=".4"/><ellipse cx="33" cy="35" rx="9" ry="27" transform="rotate(30 33 35)" fill="#B8741F" stroke="#F4C150" stroke-width="3"/></svg>
+      <svg class="pz pz-wheel pz-wheel1" viewBox="0 0 100 100"><circle cx="50" cy="52" r="46" fill="#C98A2B"/><circle cx="50" cy="50" r="45" fill="url(#gWheel)"/><circle cx="50" cy="50" r="36" fill="#B8741F"/><path d="M50 50L86.0 50.0" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L68.0 81.2" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L32.0 81.2" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L14.0 50.0" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L32.0 18.8" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L68.0 18.8" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><circle cx="50" cy="50" r="40" fill="none" stroke="#C98A2B" stroke-width="7" stroke-dasharray="2 5" opacity=".45"/><circle cx="50" cy="50" r="12" fill="#FBD978" stroke="#D9922B" stroke-width="2"/></svg>
+      <svg class="pz pz-wheel pz-wheel2" viewBox="0 0 100 100"><circle cx="50" cy="52" r="46" fill="#C98A2B"/><circle cx="50" cy="50" r="45" fill="url(#gWheel)"/><circle cx="50" cy="50" r="36" fill="#B8741F"/><path d="M50 50L86.0 50.0" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L68.0 81.2" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L32.0 81.2" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L14.0 50.0" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L32.0 18.8" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><path d="M50 50L68.0 18.8" stroke="#F6C453" stroke-width="9" stroke-linecap="round"/><circle cx="50" cy="50" r="40" fill="none" stroke="#C98A2B" stroke-width="7" stroke-dasharray="2 5" opacity=".45"/><circle cx="50" cy="50" r="12" fill="#FBD978" stroke="#D9922B" stroke-width="2"/></svg>
+    </div>
+    <div class="home-copy">
+      <p class="hand greeting" id="greeting">Benvenuti, studenti!</p>
+      <h1 class="disp home-title">Pick a pasta.<br>Play a game.<br><span>Earn your Parmigiano.</span></h1>
+      <p class="home-lead">Every guest speaker session is a dish on the menu. Cook through the mini-games and quizzes to review what you learned, one pasta at a time. The dishes get more layered as the semester goes on.</p>
+      <div class="cta-row">
+        <a class="btn btn-green btn-lg" href="#spaghetti" id="start">Mangia! Start playing</a>
+        <a class="btn btn-ghost btn-lg" href="#cucina">See my kitchen</a>
+      </div>
+    </div>
+    <aside class="bill home-bill" aria-label="Your bill">
+      <div class="bill-head" style="padding-bottom:6px"><span class="hand bill-title">Il Conto</span><span class="disp bill-tag">YOUR BILL</span></div>
+      <div class="bill-row"><span>Parmigiano points</span><b><span id="xp">0</span> XP</b></div>
+      <div class="bill-row"><span>Chef hats earned</span><b id="hats">0 / 0</b></div>
+      <div class="bill-row"><span>Golden forks</span><b id="forks">0 / 0</b></div>
+      <div class="bill-row"><span>Dishes finished</span><b id="dishes">0 / 6</b></div>
+      <div style="padding-top:14px;display:flex;flex-direction:column;gap:8px">
+        <span class="disp" style="font-size:13px;color:#4A3B2C">Pasta drying rack</span>
+        <div class="bar" style="height:12px"><div class="bar-fill" id="rack" style="width:0%"></div></div>
+      </div>
+    </aside>
+  </section>
+
+  <section aria-labelledby="menu-h" style="padding-bottom:40px">
+    <div class="section-head">
+      <div>
+        <p class="hand m0" style="color:#2E6B34;font-size:24px">Oggi in cucina</p>
+        <h2 id="menu-h" class="disp m0" style="font-size:44px">Il Menù</h2>
+      </div>
+      <p class="m0 muted" style="font-size:15px" id="menu-note">6 courses · from simple to layered · new dishes unlock after each session</p>
+    </div>
+    <div class="menu-grid" id="menu"></div>
+  </section>
+
+  <section aria-labelledby="how-h" style="padding-bottom:56px">
+    <h2 id="how-h" class="hand" style="margin:0 0 14px;font-size:32px;color:#2E6B34">Come funziona</h2>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><div><h3 class="disp">Pick a dish</h3><p class="meta">Each pasta is one guest speaker session. Start with the simplest and work up to the Lasagna.</p></div></div>
+      <div class="step"><span class="num">2</span><div><h3 class="disp">Play the mini-games</h3><p class="meta">Drag, sort, order and quiz your way through what the speaker taught.</p></div></div>
+      <div class="step"><span class="num">3</span><div><h3 class="disp">Collect Parmigiano</h3><p class="meta">Earn XP, chef hats for every game and golden forks for perfect scores.</p></div></div>
+    </div>
+  </section>
+  </div>
+</template>
+
+<!-- Level: ONE reusable template for every pasta. script.js fills it from data/<pasta>.json -->
+<template id="tpl-level">
+ <div>
+  <section class="hero">
+    <div class="hero-main">
+      <div class="hero-icon" id="hero-art"></div>
+      <div class="hero-copy">
+        <p class="hand hero-kicker" id="hero-kicker"></p>
+        <h1 class="disp hero-title" id="hero-title"></h1>
+        <p class="hero-blurb" id="hero-blurb"></p>
+      </div>
+    </div>
+    <aside class="bill hero-bill" aria-label="Your bill for this table">
+      <div class="bill-head"><span class="hand bill-title" style="font-size:30px">Il Conto</span><span class="disp bill-tag" id="bill-tag"></span></div>
+      <div id="bill-rows"></div>
+      <div class="bill-row bill-total"><span class="disp">Totale Parmigiano</span><b><span id="level-xp">0</span> XP</b></div>
+    </aside>
+  </section>
+
+  <nav aria-label="Games" class="tabs" id="tabs"></nav>
+
+  <section class="panel" aria-live="polite">
+    <div class="ck ck-sm"></div>
+    <div class="panel-body" id="panel"></div>
+  </section>
+
+  <div class="pager" id="pager"></div>
+  </div>
+</template>
+
+<!-- La Mia Cucina (profile) -->
+<template id="tpl-cucina">
+ <div>
+  <section class="hero" style="padding:12px 0 32px">
+    <div class="hero-main" style="flex:1 1 460px">
+      <div class="avatar"><svg width="76" height="76" viewBox="0 0 64 64" aria-hidden="true"><path d="M18 40c-7 0-12-5-12-11s6-11 12-10c2-7 8-11 14-11s12 4 14 11c6-1 12 4 12 10s-5 11-12 11z" fill="#fff"/><rect x="18" y="40" width="28" height="14" rx="3" fill="#fff"/><path d="M24 44v8M32 44v8M40 44v8" stroke="#D9BF96" stroke-width="2" stroke-linecap="round"/></svg></div>
+      <div class="hero-copy">
+        <p class="hand m0" style="color:#2E6B34;font-size:26px">La Mia Cucina</p>
+        <h1 class="disp hero-title">Chef <span id="nick" style="color:inherit">Ospite</span></h1>
+        <p class="m0 muted" style="font-size:17px">Rank: <b style="color:#C0392B" id="rank">Lavapiatti</b> · <span id="next-text"></span></p>
+        <div class="bar" style="max-width:420px" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progress to next rank" id="rank-bar"><div class="bar-fill" id="rank-fill" style="width:0%"></div></div>
+        <p class="m0" style="margin-top:4px;font-size:15px" id="guest-note" hidden>Cooking as a guest. <a href="#prenota">Book a table</a> to put your name on the door.</p>
+      </div>
+    </div>
+    <aside class="bill" aria-label="Your bill" style="flex:0 1 320px;transform:rotate(-1deg)">
+      <div class="bill-head"><span class="hand bill-title">Il Conto</span><span class="disp bill-tag">YOUR BILL</span></div>
+      <div class="bill-row"><span>Parmigiano points</span><b><span id="xp">0</span> XP</b></div>
+      <div class="bill-row"><span>Chef hats</span><b id="hats">0 / 0</b></div>
+      <div class="bill-row"><span>Golden forks</span><b id="forks">0 / 0</b></div>
+      <div class="bill-row"><span>Dishes finished</span><b id="dishes">0 / 6</b></div>
+    </aside>
+  </section>
+
+  <section class="card" aria-labelledby="rack-h" style="margin-bottom:24px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:10px;padding-bottom:18px">
+      <h2 id="rack-h" class="disp m0" style="font-size:28px">The pasta drying rack</h2>
+      <p class="m0 muted" style="font-size:15px">One pasta hangs to dry for every dish you finish.</p>
+    </div>
+    <div class="rack-wrap"><div class="rack-rod"></div><div class="rack-grid" id="rack"></div></div>
+    <div style="padding-top:18px;display:flex;flex-direction:column;gap:8px">
+      <span class="disp muted" style="font-size:14px" id="rack-text">Rack filled: 0 of 6 dishes</span>
+      <div class="bar"><div class="bar-fill" id="rack-fill" style="width:0%"></div></div>
+    </div>
+  </section>
+
+  <div class="two-up">
+    <section class="card" aria-labelledby="hats-h">
+      <h2 id="hats-h" class="disp" style="margin:0 0 4px;font-size:24px">Chef hats</h2>
+      <p class="muted" style="margin:0 0 16px;font-size:15px">One for every mini-game you cook through.</p>
+      <div class="badges" id="hat-list"></div>
+    </section>
+    <section class="card" aria-labelledby="forks-h">
+      <h2 id="forks-h" class="disp" style="margin:0 0 4px;font-size:24px">Golden forks</h2>
+      <p class="muted" style="margin:0 0 16px;font-size:15px">Only for perfect scores. Al dente, every time.</p>
+      <div class="badges" id="fork-list"></div>
+    </section>
+  </div>
+
+  <section style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding-bottom:48px">
+    <a class="btn btn-green" href="#menu">Back to Il Menù</a>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+      <span id="confirm" hidden style="display:contents">
+        <span style="font-size:15px;font-weight:700;color:#A93226">Wash every plate and start from zero?</span>
+        <button class="btn btn-red" id="do-reset" type="button">Yes, reset</button>
+        <button class="btn btn-ghost" id="cancel-reset" type="button">Keep my points</button>
+      </span>
+      <button class="btn btn-ghost" id="ask-reset" type="button">Reset my progress</button>
+    </div>
+  </section>
+  </div>
+</template>
+
+<!-- Prenota un Tavolo (login) -->
+<template id="tpl-prenota">
+ <div style="display:flex;justify-content:center;padding:20px 0 64px">
+    <div style="width:100%;max-width:520px;position:relative">
+      <div style="position:absolute;inset:14px -10px -12px 10px;background:#C0392B;border-radius:26px;transform:rotate(2.2deg)" aria-hidden="true"></div>
+      <div style="position:relative;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 18px 40px rgba(43,29,20,.15)">
+        <div class="ck" style="height:14px;background-size:14px 14px"></div>
+        <div style="padding:clamp(22px,5vw,40px);display:flex;flex-direction:column;gap:20px">
+          <div style="text-align:center;display:flex;flex-direction:column;gap:4px;align-items:center">
+            <svg width="58" height="40" viewBox="0 0 64 44" aria-hidden="true"><ellipse cx="32" cy="38" rx="30" ry="5" fill="#F0DDBD"/><path d="M6 36a26 24 0 0 1 52 0z" fill="#2E6B34"/><circle cx="32" cy="10" r="4" fill="#2E6B34"/><path d="M18 26c3-6 7-9 12-10" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".6"/></svg>
+            <p class="hand m0" style="font-size:24px;color:#2E6B34">Riservato per te</p>
+            <h1 class="disp m0" style="font-size:clamp(32px,6vw,42px);line-height:1.05">Prenota un Tavolo</h1>
+            <p class="m0 muted" style="font-size:15px">Book a table to save your Parmigiano points under your name.</p>
+          </div>
+
+          <div id="seated" hidden style="display:flex;text-align:center;flex-direction:column;gap:14px;align-items:center;border:2px dashed #E3C9A0;border-radius:18px;padding:22px">
+            <p class="hand m0" style="font-size:36px;color:#C0392B">Tavolo confermato!</p>
+            <p class="m0" style="font-size:17px">Seated as <b id="seated-nick"></b>. Your points are waiting in the kitchen.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
+              <a class="btn btn-green" href="#menu">Mangia! See the menu</a>
+              <button class="btn btn-ghost" type="button" id="logout">Log out</button>
+            </div>
+          </div>
+
+          <div id="booking" style="display:flex;flex-direction:column;gap:18px">
+            <div role="tablist" aria-label="Book or sign in" style="display:flex;gap:4px;background:#F6E6CC;border-radius:999px;padding:4px">
+              <button role="tab" type="button" class="seg seg-on" aria-selected="true" id="to-reg">New table</button>
+              <button role="tab" type="button" class="seg" aria-selected="false" id="to-log">I have a booking</button>
+            </div>
+            <form id="book-form" style="display:flex;flex-direction:column;gap:16px" novalidate>
+              <div class="field">
+                <label class="lbl" for="who">Nickname or email</label>
+                <input id="who" class="inp" type="text" autocomplete="username" placeholder="es. Orsi or orsola@essec.edu" maxlength="80">
+              </div>
+              <div class="field">
+                <label class="lbl" for="pw">Password</label>
+                <div style="display:flex;gap:8px">
+                  <input id="pw" class="inp" type="password" autocomplete="new-password" placeholder="At least 6 characters">
+                  <button type="button" class="btn btn-ghost" id="toggle-pw" aria-pressed="false" style="flex:none;border-radius:12px;padding:10px 14px">Show</button>
+                </div>
+              </div>
+              <p role="alert" id="err" class="m0" style="font-size:15px;font-weight:700;color:#A93226" hidden></p>
+              <button type="submit" class="btn btn-red btn-lg" id="submit">Prenota il mio tavolo</button>
+            </form>
+            <p class="m0 muted" style="font-size:13px;line-height:1.5;background:#FFF4D6;border-radius:12px;padding:10px 14px">Prototype: this keeps your nickname in this browser only and never stores your password. For real accounts, connect Supabase (Session 1, Part 3) to create the user table and hand out login tokens.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<!-- Shown for a dish that is locked or not on the menu -->
+<template id="tpl-missing">
+  <div class="center" style="padding:60px 10px 80px">
+    <p class="hand m0" style="font-size:40px;color:#C0392B">Still in the kitchen…</p>
+    <p class="m0 muted" style="font-size:17px" id="missing-text">That dish is not on the menu yet.</p>
+    <a class="btn btn-green" href="#menu">Back to Il Menù</a>
+  </div>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>

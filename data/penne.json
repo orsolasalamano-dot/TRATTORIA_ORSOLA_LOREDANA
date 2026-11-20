@@ -1,0 +1,235 @@
+{
+  "level": 2,
+  "pasta": "Penne",
+  "session": "Session 2 · Yellow Pages (30 Oct) · Nick Goh",
+  "topic": "Building an AI marketing team: a lite agentic workflow with Claude",
+  "games": [
+    {
+      "id": "penne.brigata",
+      "title": "La Brigata",
+      "type": "match",
+      "maxScore": 120,
+      "scoring": "+20 correct pair, -5 wrong (floor 0)",
+      "pairs": [
+        {
+          "role": "Brief Writer",
+          "team": "PLANNING",
+          "output": "Draft brief from the project context: goal, audience, budget, timing"
+        },
+        {
+          "role": "Brief Validator",
+          "team": "PLANNING",
+          "output": "A verdict and the top fixes, after critiquing the brief in a fresh chat"
+        },
+        {
+          "role": "Strategist",
+          "team": "PLANNING",
+          "output": "The Big Idea one-pager, built from the validated brief"
+        },
+        {
+          "role": "Designer / Art Director",
+          "team": "PRODUCTION",
+          "output": "Key visual concepts and assets, using connectors such as Higgsfield"
+        },
+        {
+          "role": "Copywriter",
+          "team": "PRODUCTION",
+          "output": "A messaging hierarchy adapted into channel-by-channel copy"
+        },
+        {
+          "role": "Reviewer",
+          "team": "PRODUCTION",
+          "output": "Edits and sign-off, after checking work against brand voice and the Big Idea"
+        }
+      ],
+      "kicker": "GAME 1 · MATCHING",
+      "intro": "Nick's AI marketing team works like a kitchen brigade: a planning team and a production team. Tap a chef, then tap the dish that chef sends out. +20 for a match, −5 for a wrong plate.",
+      "rolesTitle": "The chefs",
+      "outputsTitle": "What comes out of the kitchen",
+      "winText": "The brigade is staffed: {score} Parmigiano points"
+    },
+    {
+      "id": "penne.passa",
+      "title": "Passa il Piatto",
+      "type": "order",
+      "maxScore": 100,
+      "scoring": "100 if first check is correct, -20 per failed check, minimum 20",
+      "answer": [
+        "writer",
+        "validator",
+        "strategist",
+        "you",
+        "prod",
+        "reviewer"
+      ],
+      "items": {
+        "writer": {
+          "label": "Brief Writer",
+          "hint": "Drafts the brief"
+        },
+        "validator": {
+          "label": "Brief Validator",
+          "hint": "New chat, fresh eyes"
+        },
+        "strategist": {
+          "label": "Strategist",
+          "hint": "Digests the brief, shapes the Big Idea"
+        },
+        "you": {
+          "label": "You",
+          "hint": "Approve and save to the knowledge base"
+        },
+        "prod": {
+          "label": "Designer + Copywriter",
+          "hint": "KVs via Higgsfield, plus channel messaging"
+        },
+        "reviewer": {
+          "label": "Reviewer",
+          "hint": "Checks brand voice"
+        }
+      },
+      "recap": "Brief Writer drafts → Brief Validator checks it in a new chat with fresh eyes → Strategist shapes the Big Idea → **you** approve and save it to the knowledge base → Designer + Copywriter make KVs via Higgsfield plus channel messaging → Reviewer checks brand voice. The human sign-off sits in the middle, before anything is produced.",
+      "kicker": "GAME 2 · HANDOFF CHAIN",
+      "intro": "Rebuild the handoff chain: in what order does the plate travel from the first brief to the final check? Tap a station, or drag it onto the pass.",
+      "poolTitle": "Who's cooking?",
+      "emptyLabel": "Empty step",
+      "unit": [
+        "step",
+        "steps"
+      ],
+      "fillMsg": "Fill every step on the pass first!",
+      "poolEmptyMsg": "Everyone is on the pass. Tap a step to send it back.",
+      "checkLabel": "Assaggia! Check the chain",
+      "winText": "The plate made it down the chain: {score} Parmigiano points"
+    },
+    {
+      "id": "penne.quiz",
+      "title": "Il Quiz di Nick",
+      "type": "quiz",
+      "pointsEach": 10,
+      "maxScore": 100,
+      "questions": [
+        {
+          "question": "What kicks off the Marketing Brief Builder in Nick’s setup?",
+          "options": [
+            "A student types the whole brief by hand",
+            "A scheduled task: Claude checks the inbox daily for the latest \"Marketing Brief\" email",
+            "A TikTok trend alert",
+            "The Reviewer asks for it"
+          ],
+          "answer": 1,
+          "explanation": "The Email Trigger: the Marketing Brief Builder runs as a scheduled task, finds the latest email labelled \"Marketing Brief\" and drafts from it."
+        },
+        {
+          "question": "Why does the Brief Validator critique the brief in a new chat?",
+          "options": [
+            "To save tokens",
+            "Fresh eyes: it is not anchored on the conversation that wrote the draft",
+            "Because skills only work in new chats",
+            "So the client can watch"
+          ],
+          "answer": 1,
+          "explanation": "The handoff chain says it plainly: \"New chat, fresh eyes.\" It checks objective, audience, message and metric, then returns a verdict and top fixes."
+        },
+        {
+          "question": "Step 4 of the handoff chain belongs to…",
+          "options": [
+            "The Strategist",
+            "The Copywriter",
+            "You, the human: approve and save to the knowledge base",
+            "Higgsfield"
+          ],
+          "answer": 2,
+          "explanation": "A person signs off on the strategy before any production starts, and the approved work becomes shared context for the rest of the team."
+        },
+        {
+          "question": "What is the Strategist’s output?",
+          "options": [
+            "A Big Idea one-pager",
+            "A Gmail draft",
+            "A 16:9 video",
+            "A list of hashtags"
+          ],
+          "answer": 0,
+          "explanation": "The Strategist digests the validated brief, develops the Big Idea and outputs a one-pager."
+        },
+        {
+          "question": "Put the Terra messaging layers in campaign order (weeks 1–3, 4–6, 7–12).",
+          "options": [
+            "Made to Be Kept → Nothing to Explain → The Art of Renewal",
+            "Nothing to Explain → The Art of Renewal → Made to Be Kept",
+            "The Art of Renewal → Made to Be Kept → Nothing to Explain",
+            "All three at once"
+          ],
+          "answer": 1,
+          "explanation": "Object first (\"Nothing to Explain\"), then the material story (\"The Art of Renewal\"), then longevity (\"Made to Be Kept\")."
+        },
+        {
+          "question": "Asked to swap a real brand ambassador’s face into the generated image, Claude…",
+          "options": [
+            "Did it straight away",
+            "Declined: a realistic likeness of a real person could read as a real endorsement or an official ad",
+            "Asked for a higher-resolution photo",
+            "Sent it to the Reviewer"
+          ],
+          "answer": 1,
+          "explanation": "It offered to keep a clearly fictional model instead, and noted the real ambassador should not be generated or composited for anything that leaves the team."
+        },
+        {
+          "question": "How were unverified material claims (like recycled-material percentages) handled?",
+          "options": [
+            "Rounded up to sound better",
+            "Flagged \"[to verify]\" and kept out of the copy until confirmed",
+            "Deleted from the brief",
+            "Moved to the hashtags"
+          ],
+          "answer": 1,
+          "explanation": "Throughout the workflow, anything not yet verified was marked \"[to verify]\" or \"[confirm]\" instead of being stated as fact."
+        },
+        {
+          "question": "The Creative Review Scorer judged work through which agency lenses?",
+          "options": [
+            "BBH, Ogilvy and McCann",
+            "WPP, VML and AKQA",
+            "Havas, Lowe and Euro RSCG",
+            "Google, Meta and TikTok"
+          ],
+          "answer": 0,
+          "explanation": "Each execution got a BBH, Ogilvy and McCann score, plus strengths, weaknesses and a suggestion."
+        },
+        {
+          "question": "Which execution scored highest?",
+          "options": [
+            "The feed post (4.3/10)",
+            "The 3-frame Instagram Story (5.7/10)",
+            "\"Hand on the clasp\" (6.7/10)",
+            "They all tied"
+          ],
+          "answer": 2,
+          "explanation": "The close-up of a hand just about to open the bag carried desire and anticipation with no claim needed, so it beat the desert story and post."
+        },
+        {
+          "question": "Which pair of tools generated the key visuals and motion?",
+          "options": [
+            "Canva and Figma",
+            "ChatGPT and Higgsfield / Cinema Studio",
+            "Excel and PowerPoint",
+            "Vercel and GitHub"
+          ],
+          "answer": 1,
+          "explanation": "The Designer / Art Director used connectors like Higgsfield, with ChatGPT images and Cinema Studio for the motion pieces."
+        }
+      ],
+      "kicker": "QUIZ",
+      "intro": "Ten questions on the workflow and the fictional Terra campaign. 10 points each.",
+      "perfectText": "Ten for ten. Nick would give this a 10/10 creative score"
+    }
+  ],
+  "page": {
+    "kicker": "Level 2 · Session 2 · 30 October",
+    "venue": "Yellow Pages",
+    "table": "TAVOLO 2",
+    "blurb": "Building an AI marketing team: a lite agentic workflow with Claude, with Nick Goh. Staff the kitchen brigade, pass the plate down the handoff chain and survive Nick's quiz on the Terra campaign.",
+    "credit": "Session 2 · Yellow Pages · Nick Goh"
+  }
+}

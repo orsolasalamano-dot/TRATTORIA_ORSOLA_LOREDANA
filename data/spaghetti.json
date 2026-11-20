@@ -1,0 +1,307 @@
+{
+  "level": 1,
+  "pasta": "Spaghetti",
+  "session": "Session 1 · LaunchLab (9 Oct)",
+  "topic": "Vibe coding: Claude Design, Claude Code, GitHub, Vercel, Supabase",
+  "games": [
+    {
+      "id": "spaghetti.untangle",
+      "title": "Untangle the Spaghetti",
+      "type": "order",
+      "intro": "Your Git flow got tangled in the colander. Put the five strands in the right order on the plates, from starting your own work to landing it in the main project. Tap a strand, or drag it onto a plate.",
+      "maxScore": 100,
+      "scoring": "100 if first check is correct, -20 per failed check, minimum 20",
+      "answer": [
+        "branch",
+        "commit",
+        "push",
+        "pr",
+        "merge"
+      ],
+      "items": {
+        "branch": {
+          "label": "Branch",
+          "hint": "Start your own strand of work, away from main"
+        },
+        "commit": {
+          "label": "Commit",
+          "hint": "Save a snapshot with a short note"
+        },
+        "push": {
+          "label": "Push",
+          "hint": "Send your saved snapshots up to GitHub"
+        },
+        "pr": {
+          "label": "Pull request",
+          "hint": "Ask teammates to review your changes"
+        },
+        "merge": {
+          "label": "Merge",
+          "hint": "Combine the approved changes into main"
+        }
+      },
+      "slotLabels": [
+        "Plate 1",
+        "Plate 2",
+        "Plate 3",
+        "Plate 4",
+        "Plate 5"
+      ],
+      "recap": "Branch → Commit → Push → Pull request → Merge. A commit saves locally and NOT on GitHub until you push. A push uploads straight away with no review; a pull request asks teammates to review first, and merging adds the approved changes to the main version.",
+      "kicker": "GAME 1 · GIT FLOW",
+      "poolTitle": "The tangle",
+      "emptyLabel": "Empty plate",
+      "unit": [
+        "strand",
+        "strands"
+      ],
+      "fillMsg": "Fill every plate first!",
+      "fixHint": "Tap the red plates to fix them.",
+      "poolEmptyMsg": "Every strand is on a plate. Tap a plate to send one back.",
+      "checkLabel": "Assaggia! Check my order",
+      "squiggle": true
+    },
+    {
+      "id": "spaghetti.sauce",
+      "title": "Sauce Sorter",
+      "type": "timed-sort",
+      "seconds": 45,
+      "maxScore": 120,
+      "scoring": "+10 correct, -5 wrong (floor 0)",
+      "pots": {
+        "html": "HTML · la pasta · structure",
+        "css": "CSS · il sugo · style",
+        "js": "JS · le spezie · action"
+      },
+      "snippets": [
+        {
+          "code": "<h1>Benvenuti!</h1>",
+          "answer": "html"
+        },
+        {
+          "code": "<button>Mangia!</button>",
+          "answer": "html"
+        },
+        {
+          "code": "<img src=\"spaghetti.png\" alt=\"Spaghetti\">",
+          "answer": "html"
+        },
+        {
+          "code": "<p>Every session is a dish.</p>",
+          "answer": "html"
+        },
+        {
+          "code": "button { background: orange; }",
+          "answer": "css"
+        },
+        {
+          "code": "h1 { font-family: 'Fredoka'; }",
+          "answer": "css"
+        },
+        {
+          "code": ".card { padding: 24px; border-radius: 16px; }",
+          "answer": "css"
+        },
+        {
+          "code": "@media (max-width: 600px) { nav { flex-direction: column; } }",
+          "answer": "css"
+        },
+        {
+          "code": "button.addEventListener('click', addToBill);",
+          "answer": "js"
+        },
+        {
+          "code": "score = score + 10;",
+          "answer": "js"
+        },
+        {
+          "code": "form.onsubmit = () => checkPassword();",
+          "answer": "js"
+        },
+        {
+          "code": "bill.textContent = total + ' XP';",
+          "answer": "js"
+        }
+      ],
+      "kicker": "GAME 2 · TIMED",
+      "intro": "Code snippets drop onto the counter. Throw each one in the right pot before the timer runs out: HTML is the pasta (the structure), CSS is the sauce (the style), JS is the spices (the action).",
+      "explain": {
+        "html": "HTML is the pasta: words and structure.",
+        "css": "CSS is the sauce: colours, fonts, spacing, phone vs laptop.",
+        "js": "JS is the spices: what happens on click, type, submit."
+      },
+      "recap": "**Remember the three files:** **index.html** holds the words and structure people read. **styles.css** holds the look: colours, fonts, spacing, phone vs laptop. **script.js** holds the behaviour: what happens on click, type or submit.",
+      "perfectText": "Twelve out of twelve. The sauce is perfect"
+    },
+    {
+      "id": "spaghetti.forno",
+      "title": "Dal Forno al Tavolo",
+      "type": "order",
+      "intro": "A dish goes from recipe to cooking to plating to serving. Match each LaunchLab tool to its station so the website gets from your idea to a live link on the table.",
+      "maxScore": 100,
+      "scoring": "100 if first check is correct, -20 per failed check, minimum 20",
+      "answer": [
+        "design",
+        "build",
+        "github",
+        "vercel"
+      ],
+      "items": {
+        "design": {
+          "label": "Claude Design",
+          "hint": "Describe the look, no code needed"
+        },
+        "build": {
+          "label": "Claude Code",
+          "hint": "Agentic coding that writes the real files"
+        },
+        "github": {
+          "label": "GitHub",
+          "hint": "Store, share and collaborate on your repo"
+        },
+        "vercel": {
+          "label": "Vercel",
+          "hint": "Builds and hosts at a public link"
+        }
+      },
+      "slotLabels": [
+        "La Ricetta · the recipe",
+        "Il Fornello · the cooking",
+        "L'Impiattamento · the plating",
+        "Il Tavolo · the serving"
+      ],
+      "recap": "Design → Build → GitHub → Vercel. Design the front end first in Claude Design, use \"Handoff to Claude Code…\" in the Share menu to build it, push the repo to GitHub, then import that repo in Vercel. From then on every push rebuilds the live site, and every pull request gets its own preview link.",
+      "kicker": "GAME 3 · WORKFLOW",
+      "poolTitle": "The tools",
+      "emptyLabel": "Which tool cooks here?",
+      "unit": [
+        "tool",
+        "tools"
+      ],
+      "fillMsg": "Fill every station first!",
+      "fixHint": "Tap the red stations to fix them.",
+      "poolEmptyMsg": "Every tool is at a station. Tap a station to send one back.",
+      "checkLabel": "Assaggia! Check my order",
+      "squiggle": true
+    },
+    {
+      "id": "spaghetti.quiz",
+      "title": "Il Quiz del Cameriere",
+      "type": "quiz",
+      "pointsEach": 10,
+      "maxScore": 90,
+      "questions": [
+        {
+          "question": "You want your own copy of a classmate’s repo on your GitHub account, to change without touching the original. You…",
+          "options": [
+            "Clone it",
+            "Fork it",
+            "Merge it",
+            "Push it"
+          ],
+          "answer": 1,
+          "explanation": "A fork is your own copy on your GitHub account. Clone is what brings a repo down onto your computer."
+        },
+        {
+          "question": "You just made a commit. Where are your changes now?",
+          "options": [
+            "Live on your website",
+            "On GitHub for everyone",
+            "Saved on your computer only",
+            "In a pull request"
+          ],
+          "answer": 2,
+          "explanation": "A commit is a local snapshot with a note. It reaches GitHub only when you push."
+        },
+        {
+          "question": "Which one asks teammates to review your changes before they reach the main project?",
+          "options": [
+            "Push",
+            "Commit",
+            "Pull request",
+            "Clone"
+          ],
+          "answer": 2,
+          "explanation": "A push uploads straight away with no approval. A pull request opens a discussion and review first."
+        },
+        {
+          "question": "Your repo is connected to Vercel. What happens when you push?",
+          "options": [
+            "Nothing until you upload a zip",
+            "Vercel rebuilds and updates the live site automatically",
+            "GitHub deletes the old version",
+            "You get an email to approve it"
+          ],
+          "answer": 1,
+          "explanation": "Once connected, Vercel watches the repo. Every push triggers a rebuild in seconds, with no manual uploading."
+        },
+        {
+          "question": "What does every pull request get on Vercel?",
+          "options": [
+            "A new repository",
+            "Its own preview link",
+            "A token",
+            "A merge button on the live site"
+          ],
+          "answer": 1,
+          "explanation": "Each pull request gets a preview link, so the team can see the changes before merging."
+        },
+        {
+          "question": "What is the difference between GitHub and Vercel?",
+          "options": [
+            "They do the same thing",
+            "GitHub hosts websites, Vercel stores code",
+            "GitHub stores your code; Vercel builds it and hosts it at a public link",
+            "Vercel is only for logins"
+          ],
+          "answer": 2,
+          "explanation": "Nothing on GitHub is a website yet. Vercel reads the repo, builds the site and hosts it at a link that updates on every push."
+        },
+        {
+          "question": "In Claude Design, where is the bridge that sends your design into Claude Code?",
+          "options": [
+            "Settings › Export to zip",
+            "Share menu › \"Handoff to Claude Code…\"",
+            "The File menu › Print",
+            "You have to copy the code by hand"
+          ],
+          "answer": 1,
+          "explanation": "Open Share in the top right and find \"Handoff to Claude Code…\". Locate it before you start: it is easy to miss."
+        },
+        {
+          "question": "A login token is best described as…",
+          "options": [
+            "Your password in plain text",
+            "A temporary sticker saying \"this is James\" that expires on its own",
+            "A row in the user table",
+            "A Vercel preview link"
+          ],
+          "answer": 1,
+          "explanation": "Your browser shows the token on every request, so the site does not ask for your password on every click. Logging out throws it away."
+        },
+        {
+          "question": "Which tool gives your site sign-up, log-in and a database of users?",
+          "options": [
+            "tiiny.host",
+            "GitHub",
+            "Supabase",
+            "Claude Design"
+          ],
+          "answer": 2,
+          "explanation": "Supabase is an open-source backend-as-a-service for authentication, verification and a user database, and it connects to GitHub, Vercel and Lovable."
+        }
+      ],
+      "kicker": "QUIZ",
+      "short": "Quiz del Cameriere",
+      "intro": "The waiter has nine questions about Git, Vercel and logins. 10 points each.",
+      "perfectText": "Nine for nine. The waiter is speechless"
+    }
+  ],
+  "page": {
+    "kicker": "Level 1 · Session 1 · 9 October",
+    "venue": "LaunchLab",
+    "table": "TAVOLO 1",
+    "blurb": "Vibe coding with Claude Design, Claude Code, GitHub and Vercel. Four mini-games to review the session: untangle Git, sort the sauce, serve the site and face the waiter's quiz.",
+    "credit": "Session 1 · LaunchLab · Yibo, Nirvan & Rishabh"
+  }
+}

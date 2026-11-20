@@ -1,0 +1,76 @@
+{
+  "storageKey": "odp-trattoria-v1",
+  "storageShape": {
+    "nick": "string (optional)",
+    "games": {
+      "<gameId>": {
+        "best": "number",
+        "done": "boolean",
+        "perfect": "boolean"
+      }
+    }
+  },
+  "ranks": [
+    [
+      0,
+      "Lavapiatti"
+    ],
+    [
+      100,
+      "Commis"
+    ],
+    [
+      250,
+      "Cuoco"
+    ],
+    [
+      450,
+      "Sous-chef"
+    ],
+    [
+      650,
+      "Chef de Cuisine"
+    ]
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "pasta": "Spaghetti",
+      "status": "open",
+      "file": "spaghetti.json",
+      "session": "LaunchLab"
+    },
+    {
+      "level": 2,
+      "pasta": "Penne",
+      "status": "open",
+      "file": "penne.json",
+      "session": "Yellow Pages"
+    },
+    {
+      "level": 3,
+      "pasta": "Fusilli",
+      "status": "locked",
+      "session": "[Speaker TBC]"
+    },
+    {
+      "level": 4,
+      "pasta": "Farfalle",
+      "status": "locked",
+      "session": "[Speaker TBC]"
+    },
+    {
+      "level": 5,
+      "pasta": "Ravioli",
+      "status": "locked",
+      "session": "[Speaker TBC]"
+    },
+    {
+      "level": 6,
+      "pasta": "Lasagna",
+      "status": "locked",
+      "boss": true,
+      "session": "Final boss"
+    }
+  ]
+}
